@@ -23,7 +23,7 @@ jobs:
         run: bun install
 
       - name: Cache bun dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: bun-cache
         with:
           path: node_modules
@@ -50,7 +50,7 @@ jobs:
 
       - name: Restore bun dependencies
         id: bun-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
