@@ -44,7 +44,7 @@ jobs:
       
       - name: post preview url to pull-request
         if: github.event.action == 'opened'
-        uses: actions/github-script@v3
+        uses: actions/github-script@v7
         with:
           script: |
             github.issues.createComment({
